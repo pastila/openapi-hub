@@ -1,0 +1,9 @@
+services:
+  app.openapi_doc.admin:
+    class: App\Admin\OpenApiDocAdmin
+    arguments:
+      - ~
+      - App\Entity\OpenApiDoc
+      - ~
+    tags:
+      - { name: sonata.admin, manager_type: orm, label: АПИ, group: api }

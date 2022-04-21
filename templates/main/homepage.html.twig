@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="homepage" class="row" {{ stimulus_controller('homepage') }}>
+        <div class="col-lg-6 offset-lg-3 ">
+            <div class="row justify-content-center">
+
+                {% for api in apis %}
+                    <div class="card" style="width: 320px;">
+                        <img src="{{ vich_uploader_asset(api) }}" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ api.title }}</h5>
+                            <p class="card-text">{{ api.description }}</p>
+                            <div class="text-muted">{{ api.updatedAt|date('j F Y H:i') }}</div>
+                            <a href="{{ path('api_show', {'id': api.id}) }}" class="btn btn-success"><i class="fa fa-list"></i>&nbsp;Просмотр</a>
+                            {% if is_granted('api_edit', api) %}
+                            <a href="{{ path('api_edit', {'id': api.id}) }}" class="btn btn-primary"><i class="fa fa-pencil-square"></i>&nbsp;Редактировать</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

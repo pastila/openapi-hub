@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div {{ stimulus_controller('show', { url: path('app_yaml_show', {'id': api.id}) }) }}>
+        <div id="apibar">
+            <div class="apibar-title">
+                <a href="{{ path('homepage') }}">Главная</a>
+            </div>
+            <h1>{{ api.title }}</h1>
+        </div>
+        <div id="api-editor"></div>
+    </div>
+{% endblock %}

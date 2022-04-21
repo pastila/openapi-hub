@@ -1,0 +1,23 @@
+{
+  "name": "swaggergub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@symfony/stimulus-bridge": "github:symfony/stimulus-bridge",
+    "@symfony/webpack-encore": "github:symfony/webpack-encore",
+    "core-js": "^3.22.1",
+    "stimulus": "^3.0.1",
+    "webpack-notifier": "^1.15.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "font-awesome": "^4.7.0",
+    "swagger-editor": "^4.2.2"
+  }
+}

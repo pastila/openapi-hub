@@ -1,0 +1,42 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #444;
+    min-width: 1366px;
+    font-family: 'RobotoInternal';
+    line-height: inherit;
+}
+#apibar{
+    display: flex;
+    height: 50px;
+    position: relative;
+    padding: 10px;
+}
+#api-editor{
+    border-top: 1px solid #d7d7d7;
+}
+#api-editor .swagger-editor .swagger-ui{
+    overflow-y: scroll;
+}
+#apibar>*{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
+#apibar h1{
+    margin-left: 40px;
+    font-size: 14pt;
+}
+#apibar-title{
+
+}
